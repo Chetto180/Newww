@@ -1,12 +1,23 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
+      <Home />
+      <Module />
   </div>
 </template>
+
+<script>
+import Home from "./views/Home.vue";
+import Module from './components/module.vue';
+
+export default {
+  name: 'app',
+  components:{
+      Home,
+      Module
+  }
+}
+</script>
+
 
 <style lang="scss">
 #app {
