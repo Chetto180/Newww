@@ -1,10 +1,12 @@
 <template>
-  <div class="test">
-    <p>Hi</p>
-  </div>
+  <Module />
 </template>
 <script>
+import Module from '../components/module.vue';
 export default {
-  name: 'about'
+  name: 'About',
+  components:{
+    Module
+  }
 }
 </script>

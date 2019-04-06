@@ -1,40 +1,29 @@
 <template>
   <div id="app">
-      <Home />
-      <Module />
+      <nav>
+        <router-link to="/">Home</router-link>
+        <router-link to="/About">About</router-link>
+      </nav>
+      <router-view/>
   </div>
 </template>
 
 <script>
 import Home from "./views/Home.vue";
-import Module from './components/module.vue';
+import About from './views/About.vue';
 
 export default {
   name: 'app',
   components:{
       Home,
-      Module
+      About
   }
 }
 </script>
 
 
 <style lang="scss">
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-#nav {
-  padding: 30px;
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-    &.router-link-exact-active {
-      color: #42b983;
+    body{
+      background: #eee;
     }
-  }
-}
 </style>
